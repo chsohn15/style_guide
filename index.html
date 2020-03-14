@@ -4,6 +4,13 @@
         <title>Writer's Notebook</title>
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
         <style>
+            body {
+                width: 90%;
+                margin: 0 auto;
+            }
+            #banner, #subtitle, .container, #menu {
+                margin: 1%;
+            }
             #banner {
                 border-radius: 20px;
                 width: 90%;
@@ -23,9 +30,14 @@
                 padding-top: -10px;
             }
             .container {
-                display: flex;
+                display: grid;
                 flex-wrap: wrap;
                 align: center;
+                float: center;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-gap: 10px;
+                justify-items: center;
             }
             .container > div {
                 background-color: #CCFFFF;
@@ -37,16 +49,48 @@
                 width: 200px;
                 height: 200px;
                 font-family: Lobster;
+                justify-content: center;
             }
+            #menu > ul {
+                
+                flexwrap: wrap;
+                list-style-type: none;
+                margin: 70px;
+                padding: 10px;
+                overflow: hidden;
+                background-color: #CCFFFF; 
+            }
+            #menu > ul > li {
+                float: left;
+                font-family: Open Sans;
+                padding: 20px;
+                font-family: Open Sans;
+                display: block;
+                color: black;
+                text-align: center;
+                text-decoration: none;
+            }
+          
+            
         </style>
     
     </head>
     <body>
+        <div id="menu">
+            <ul>
+                <li>Home</li>
+                <li>Browse Topics</li>
+                <li>About</li>
+                <li>FAQs</li>
+                <li>Contact</li>
+            </ul>
+        </div>
         <h1 id = "banner">The Writer's Notebook</h1>
         <h3 id = "subtitle">A comprehensive style guide to all types of writing</h3>
         <div class="container">
             <div>Persuasive Writing</div>
             <div>Literary Analysis</div>
+            <div>Informational Writing</div>
             <div>Research Paper</div>
             <div>Creative Writing</div>
             <div>Business Writing</div>
